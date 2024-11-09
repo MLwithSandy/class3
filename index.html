@@ -1,57 +1,176 @@
-<section id="steps-1893">
-  <div style="width: 100%; overflow: hidden">
-    <div class="cs-wrapper" style="width: 600px; float: left">
-      <div class="cs-content">
-        <h2 class="cs-title">Class 3 Deutsch Practice Set</h2>
-      </div>
-      <ul class="cs-card-group">
-        <li class="cs-item">
-          <h3 class="cs-h3">
-            <a href="deutsch/d001.html">Practice Questions 1</a>
-          </h3>
-        </li>
-      </ul>
-    </div>
-    <div class="cs-wrapper" style="margin-left: 620px">
-      <div class="cs-content">
-        <h2 class="cs-title">Class 3 Mathe Practice Set</h2>
-      </div>
-      <ul class="cs-card-group">
-        <li class="cs-item">
-          <h3 class="cs-h3">
-            <a href="mathe/m001.html">Practice Questions 1</a>
-          </h3>
-        </li>
-        <li class="cs-item">
-          <h3 class="cs-h3">
-            <a href="mathe/m002.html">Practice Questions 2</a>
-          </h3>
-        </li>
-      </ul>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Längen und Hohlmassen: Kommazahlen und Bruchzahlen</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      .questions {
+        list-style-type: none;
+        padding: 0;
+      }
+      .questions li {
+        margin-bottom: 10px;
+      }
+      .challenge {
+        font-weight: bold;
+        color: #d9534f;
+      }
+      .timer {
+        font-size: 24px;
+        font-weight: bold;
+        color: #d9534f;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script>
+      let timeRemaining = 35 * 60; // 35 minutes in seconds
 
-  <div class="cs-wrapper" style="margin-left: 620px">
-    <div class="cs-content">
-      <h2 class="cs-title">Class 4 Mathe Practice Set</h2>
+      function startTimer() {
+        const timerDisplay = document.getElementById("timer");
+        setInterval(() => {
+          if (timeRemaining <= 0) {
+            clearInterval();
+            alert("Die Zeit ist um!");
+            return;
+          }
+          timeRemaining--;
+          const minutes = Math.floor(timeRemaining / 60);
+          const seconds = timeRemaining % 60;
+          timerDisplay.textContent = `Verbleibende Zeit: ${minutes}:${
+            seconds < 10 ? "0" : ""
+          }${seconds}`;
+        }, 1000);
+      }
+
+      window.onload = startTimer;
+    </script>
+  </head>
+  <body>
+    <div class="timer" id="timer">Verbleibende Zeit: 35:00</div>
+
+    <h1>Längen und Hohlmassen</h1>
+    <p>
+      Mathematikübungen für Schülerinnen und Schüler der 4. Klasse, Thema:
+      <strong>Kommazahlen</strong> und <strong>Bruchzahlen</strong>.
+    </p>
+
+    <div class="section">
+      <h2>Längen</h2>
+      <ul class="questions">
+        <li><strong>Umwandlung mit Kommazahlen</strong></li>
+        <li>
+          1. Wandle die folgenden Maße um:
+          <ul>
+            <li>125 cm = ___ m</li>
+            <li>3,5 km = ___ m</li>
+            <li>2500 mm = ___ m</li>
+            <li>7,5 km = ___ m</li>
+          </ul>
+        </li>
+
+        <li><span class="challenge">Mehrstufige Umwandlung</span></li>
+        <li>
+          2. Wandle die folgenden Längen zuerst in Meter und dann in Kilometer
+          um:
+          <ul>
+            <li>3850 mm = ___ m = ___ km</li>
+            <li>4567 cm = ___ m = ___ km</li>
+          </ul>
+        </li>
+
+        <li><strong>Vergleich von Längen</strong></li>
+        <li>
+          3. Ordne die folgenden Längen von der kleinsten zur größten:
+          <ul>
+            <li>1,25 m, 2,5 m, 0,75 m, 1,5 m, 200 cm, 1,5 m</li>
+          </ul>
+        </li>
+
+        <li><strong>Kombination von Brüchen und Kommazahlen</strong></li>
+        <li>
+          4. Berechne den Umfang eines Feldes mit Länge 2,75 Meter und Breite
+          1,5 Meter.
+        </li>
+
+        <li><strong>Textaufgaben</strong></li>
+        <li>
+          5. Ein Wanderweg ist 7,5 Kilometer lang. Du gehst &frac25; der
+          Strecke. Wie viele Kilometer hast du zurückgelegt? Schreibe die
+          Antwort als Bruch und als Kommazahl.
+        </li>
+        <li>
+          6. Ein Weg ist 8 Kilometer lang. Du läufst zuerst &frac12; der
+          Strecke, machst dann eine Pause und läufst noch &frac14; des Weges.
+          Gib die Antwort als Bruch und als Kommazahl.
+        </li>
+      </ul>
     </div>
-    <ul class="cs-card-group">
-      <li class="cs-item">
-        <h3 class="cs-h3">
-          <a href="mathe4/m001.html">Practice Questions 1</a>
-        </h3>
-      </li>
-      <li class="cs-item">
-        <h3 class="cs-h3">
-          <a href="mathe4/m002.html">Practice Questions 2</a>
-        </h3>
-      </li>
-      <li class="cs-item">
-        <h3 class="cs-h3">
-          <a href="mathe4/m003.html">Practice Questions 3</a>
-        </h3>
-      </li>
-    </ul>
-  </div>
-</div>
-</section>
+
+    <div class="section">
+      <h2>Hohlmassen</h2>
+      <ul class="questions">
+        <li><strong>Umwandlung mit Kommazahlen</strong></li>
+        <li>
+          1. Wandle die folgenden Hohlmaße um:
+          <ul>
+            <li>750 ml = ___ l</li>
+            <li>1250 ml = ___ l</li>
+            <li>2 l = ___ ml</li>
+            <li>1,375 l = ___ ml</li>
+          </ul>
+        </li>
+
+        <li><strong>Vergleich von Hohlmengen</strong></li>
+        <li>
+          2. Ordne die folgenden Mengen von der kleinsten zur größten:
+          <ul>
+            <li>1,5 l, &frac34; l, 2,25 l, 1 l</li>
+          </ul>
+        </li>
+
+        <li><strong>Berechnung von Hohlmengen</strong></li>
+        <li>
+          3. Drei Becher enthalten 0,75 l, &frac34; l und 1,25 l Wasser.
+          Berechne die Gesamtmenge an Wasser und ordne die Mengen von der
+          kleinsten zur größten.
+        </li>
+
+        <li><strong>Textaufgaben</strong></li>
+        <li>
+          4. Ein Wasserbehälter fasst 5 Liter. Du füllst ihn zu &frac35; mit
+          Wasser. Wie viele Liter Wasser sind im Behälter? Schreibe die Antwort
+          als Bruch und als Kommazahl.
+        </li>
+        <li>
+          5. Ein Messbecher enthält 2 Liter Wasser. Du verwendest &frac12; des
+          Wassers. Wie viel Liter Wasser bleibt übrig? Gib die Antwort als Bruch
+          und als Kommazahl an.
+        </li>
+
+        <li><span class="challenge">Rätsel</span></li>
+        <li>
+          6. Du hast einen 1,5-Liter-Krug, der vollständig mit Saft gefüllt ist.
+          Jeden Tag trinkst du &frac18; Liter. Wie viele Tage kannst du davon
+          trinken? Berechne die Antwort als Bruch und als Kommazahl.
+        </li>
+        <li>
+          7. Ein Eimer enthält 2,5 Liter Wasser. Du fügst zuerst 0,375 Liter
+          hinzu und nimmst dann 1,125 Liter heraus. Wie viel Wasser ist jetzt im
+          Eimer?
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
