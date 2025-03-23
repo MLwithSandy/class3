@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deutsch Vokabeltrainer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+      }
+      h2 {
+        color: #2c3e50;
+      }
+      .quiz-container {
+        margin-top: 20px;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #2980b9;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #1f618d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Deutsch Vokabeltrainer</h1>
+
+      <h2>📖 Vokabelliste mit Beispielen</h2>
+      <ul>
+        <li>
+          <b>Erleichterung</b> (relief) - Nach der Prüfung fühlte er große
+          Erleichterung.
+        </li>
+        <li>
+          <b>Schicksal</b> (destiny) - Manche glauben, dass unser Schicksal
+          vorherbestimmt ist.
+        </li>
+        <li>
+          <b>Illusion</b> (illusion) - Der Magier erzeugte eine beeindruckende
+          Illusion.
+        </li>
+        <li>
+          <b>Biodiversität</b> (biodiversity) - Der Regenwald ist ein Ort hoher
+          Biodiversität.
+        </li>
+        <li>
+          <b>Entschlossenheit</b> (determination) - Mit großer Entschlossenheit
+          verfolgte sie ihr Ziel.
+        </li>
+        <li>
+          <b>Perspektive</b> (perspective) - Jeder sieht die Welt aus seiner
+          eigenen Perspektive.
+        </li>
+        <li><b>Magie</b> (magic) - Kinder lieben Geschichten voller Magie.</li>
+        <li>
+          <b>Verantwortung</b> (responsibility) - Ein guter Anführer übernimmt
+          Verantwortung.
+        </li>
+        <li>
+          <b>Gerechtigkeit</b> (justice) - Der Richter entschied über den Fall
+          mit Gerechtigkeit.
+        </li>
+        <li>
+          <b>Metapher</b> (metaphor) - „Das Leben ist eine Reise“ ist eine
+          bekannte Metapher.
+        </li>
+      </ul>
+
+      <h2>📝 Vokabel-Quiz</h2>
+      <div class="quiz-container">
+        <p>Füllen Sie die Lücken mit dem passenden Wort:</p>
+        <p>
+          1. Nach dem langen Test fühlte er eine große
+          <input type="text" id="q1" />.
+        </p>
+        <p>
+          2. Der Magier erzeugte eine perfekte <input type="text" id="q2" />.
+        </p>
+        <p>
+          3. Manche glauben, dass unser
+          <input type="text" id="q3" /> vorherbestimmt ist.
+        </p>
+        <p>4. Ein guter Anführer übernimmt <input type="text" id="q4" />.</p>
+        <button onclick="checkQuiz()">Antworten überprüfen</button>
+        <p id="quiz-result"></p>
+      </div>
+
+      <h2>🌍 Übersetzungsübung</h2>
+      <p>Übersetzen Sie die folgenden Sätze ins Englische:</p>
+      <ul>
+        <li>Die Atmosphäre im Wald war von Mystik und Stille erfüllt.</li>
+        <li>
+          Sein Selbstbewusstsein half ihm, eine schwierige Entscheidung zu
+          treffen.
+        </li>
+        <li>
+          Nach monatelanger Arbeit erreichte sie ihr Ziel mit großer
+          Entschlossenheit.
+        </li>
+      </ul>
+
+      <h2>✏️ Schreibaufgabe</h2>
+      <p>
+        Schreiben Sie einen kurzen Text mit mindestens drei der folgenden
+        Wörter:
+      </p>
+      <p>
+        <b
+          >Erzählweise, Ironie, Sehnsucht, Metapher, Verantwortung, Schicksal,
+          Entschlossenheit</b
+        >
+      </p>
+      <textarea rows="5" cols="80" placeholder="Ihr Text hier..."></textarea>
+    </div>
+
+    <script>
+      function checkQuiz() {
+        let answers = {
+          q1: "Erleichterung",
+          q2: "Illusion",
+          q3: "Schicksal",
+          q4: "Verantwortung",
+        };
+        let correct = 0;
+
+        Object.keys(answers).forEach((id) => {
+          let userAnswer = document.getElementById(id).value.trim();
+          if (userAnswer.toLowerCase() === answers[id].toLowerCase()) {
+            correct++;
+          }
+        });
+
+        document.getElementById(
+          "quiz-result"
+        ).innerText = `Sie haben ${correct} von 4 richtig!`;
+      }
+    </script>
+  </body>
+</html>

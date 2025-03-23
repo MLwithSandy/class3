@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aufsatz-Themen für die 4. Klasse</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: auto;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      .aufgaben {
+        padding: 10px;
+        background: #e8e8e8;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Aufsatz-Themen für die 4. Klasse</h1>
+
+      <h2>Erzählende Texte</h2>
+      <div class="aufgaben">
+        <ul>
+          <li>
+            📖 <strong>„Ein Tag als unsichtbare Person“</strong> – Was würdest
+            du tun, wenn du unsichtbar wärst?
+          </li>
+          <li>
+            📖 <strong>„Das magische Buch“</strong> – Was geschieht, wenn du ein
+            geheimnisvolles Buch öffnest?
+          </li>
+          <li>
+            📖 <strong>„Mein schönstes Ferienerlebnis“</strong> – Erzähle von
+            einem unvergesslichen Erlebnis.
+          </li>
+        </ul>
+      </div>
+
+      <h2>Beschreibende Texte</h2>
+      <div class="aufgaben">
+        <ul>
+          <li>
+            📝 <strong>„Mein Lieblingsort“</strong> – Beschreibe einen Ort, den
+            du liebst.
+          </li>
+          <li>
+            📝 <strong>„So sieht mein Traumberuf aus“</strong> – Welchen Beruf
+            möchtest du später haben?
+          </li>
+          <li>
+            📝 <strong>„Ein Tag in den Bergen“</strong> – Beschreibe einen
+            Ausflug in die Schweizer Alpen.
+          </li>
+        </ul>
+      </div>
+
+      <h2>Meinungsaufsätze</h2>
+      <div class="aufgaben">
+        <ul>
+          <li>
+            💬 <strong>„Sollten Kinder ein Handy haben?“</strong> – Begründe
+            deine Meinung.
+          </li>
+          <li>
+            💬 <strong>„Sind Hausaufgaben wichtig?“</strong> – Findest du sie
+            nützlich oder nicht?
+          </li>
+          <li>
+            💬 <strong>„Sollten Tiere im Zoo leben?“</strong> – Sind Zoos gut
+            für Tiere?
+          </li>
+        </ul>
+      </div>
+
+      <h2>Fantasie & Kreativität</h2>
+      <div class="aufgaben">
+        <ul>
+          <li>
+            ✨ <strong>„Wenn ich ein Tier sein könnte…“</strong> – Welches Tier
+            wärst du gern?
+          </li>
+          <li>
+            ✨ <strong>„Ein Wunsch frei!“</strong> – Was würdest du dir
+            wünschen?
+          </li>
+          <li>
+            ✨ <strong>„Die geheime Tür“</strong> – Du findest eine geheime Tür
+            in der Schule. Was passiert?
+          </li>
+        </ul>
+      </div>
+
+      <h2>📝 Schreibe deinen Aufsatz</h2>
+      <textarea
+        id="aufsatzText"
+        placeholder="Schreibe hier deinen Aufsatz..."
+      ></textarea>
+      <button onclick="saveEssay()">Speichern</button>
+      <p id="result" class="result"></p>
+    </div>
+
+    <script>
+      function saveEssay() {
+        let text = document.getElementById("aufsatzText").value;
+        if (text.length > 20) {
+          document.getElementById("result").innerText =
+            "Dein Aufsatz wurde erfolgreich gespeichert!";
+        } else {
+          document.getElementById("result").innerText =
+            "Bitte schreibe einen längeren Aufsatz.";
+        }
+      }
+    </script>
+  </body>
+</html>
